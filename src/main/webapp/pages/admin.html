@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Dashboard | SmartExamSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><div class="brand">Admin Dashboard</div><span id="currentUser" class="muted"></span></div>
+      <nav class="nav"><button class="secondary" onclick="logout()">Logout</button></nav>
+    </header>
+    <section class="layout">
+      <div class="span-8 panel">
+        <h1>User Management</h1>
+        <div id="users"></div>
+      </div>
+      <div class="span-4 panel">
+        <h2>Exam Oversight</h2>
+        <div id="adminExams" class="grid"></div>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/app.js"></script>
+  <script>loadAdminPage();</script>
+</body>
+</html>

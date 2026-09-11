@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Dashboard | SmartExamSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><div class="brand">Student Dashboard</div><span id="currentUser" class="muted"></span></div>
+      <nav class="nav"><button class="secondary" onclick="logout()">Logout</button></nav>
+    </header>
+    <section class="layout">
+      <div class="span-8 panel">
+        <h1>Available Exams</h1>
+        <div id="examList" class="grid two"></div>
+      </div>
+      <div class="span-4 panel">
+        <h2>Previous Results</h2>
+        <div id="resultList"></div>
+      </div>
+    </section>
+  </main>
+  <script src="../assets/js/app.js"></script>
+  <script>loadStudentDashboard();</script>
+</body>
+</html>

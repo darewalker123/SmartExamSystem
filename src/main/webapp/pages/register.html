@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | SmartExamSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="auth">
+  <main class="panel auth-box">
+    <h1>Create Account</h1>
+    <form>
+      <label>Name</label>
+      <input name="name" required autocomplete="name">
+      <label>Email</label>
+      <input name="email" type="email" required autocomplete="email">
+      <label>Password</label>
+      <input name="password" type="password" minlength="6" required autocomplete="new-password">
+      <label>Role</label>
+      <select name="role">
+        <option value="student">Student</option>
+        <option value="teacher">Teacher</option>
+      </select>
+      <div class="actions">
+        <button type="submit">Register</button>
+        <a class="btn secondary" href="login.html">Back to Login</a>
+      </div>
+      <div id="message" class="message"></div>
+    </form>
+  </main>
+  <script src="../assets/js/app.js"></script>
+  <script>bindAuthPage('register');</script>
+</body>
+</html>

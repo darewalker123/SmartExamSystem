@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam | SmartExamSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><div class="brand" id="examTitle">Exam</div><span id="examMeta" class="muted"></span></div>
+      <div class="timer" id="timer">--:--</div>
+    </header>
+    <section class="layout">
+      <div class="span-8 panel">
+        <div id="questionBox"></div>
+        <div class="actions">
+          <button class="secondary" onclick="nextQuestion(-1)">Previous</button>
+          <button class="secondary" onclick="nextQuestion(1)">Next</button>
+          <button onclick="submitExam()">Submit Exam</button>
+        </div>
+        <div id="message" class="message"></div>
+      </div>
+      <aside class="span-4 panel">
+        <h2>Questions</h2>
+        <div id="questionNav" class="question-nav"></div>
+      </aside>
+    </section>
+  </main>
+  <script src="../assets/js/app.js"></script>
+  <script>loadExamPage();</script>
+</body>
+</html>

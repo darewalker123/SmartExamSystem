@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher Dashboard | SmartExamSystem</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div><div class="brand">Teacher Dashboard</div><span id="currentUser" class="muted"></span></div>
+      <nav class="nav"><button class="secondary" onclick="logout()">Logout</button></nav>
+    </header>
+    <section class="layout">
+      <form id="examForm" class="span-4 panel">
+        <h2>Create Exam</h2>
+        <label>Title</label><input name="title" required>
+        <label>Subject</label><input name="subject" required>
+        <label>Description</label><textarea name="description"></textarea>
+        <label>Duration Minutes</label><input name="durationMinutes" type="number" min="1" max="360" value="30" required>
+        <label><input name="active" type="checkbox" checked style="width:auto"> Active</label>
+        <button type="submit">Create</button>
+      </form>
+      <form id="questionForm" class="span-8 panel">
+        <h2>Add Question</h2>
+        <label>Exam</label><select id="questionExamId" name="examId"></select>
+        <label>Question</label><textarea name="questionText" required></textarea>
+        <div class="grid two">
+          <div><label>Option A</label><input name="optionA" required></div>
+          <div><label>Option B</label><input name="optionB" required></div>
+          <div><label>Option C</label><input name="optionC" required></div>
+          <div><label>Option D</label><input name="optionD" required></div>
+        </div>
+        <div class="grid two">
+          <div><label>Correct Answer</label><select name="correctAnswer"><option>A</option><option>B</option><option>C</option><option>D</option></select></div>
+          <div><label>Marks</label><input name="marks" type="number" min="1" value="1"></div>
+        </div>
+        <button type="submit">Add Question</button>
+      </form>
+      <div class="span-6 panel"><h2>My Exams</h2><div id="teacherExams" class="grid"></div></div>
+      <div class="span-6 panel"><h2>Exam Results</h2><div id="teacherResults"></div></div>
+    </section>
+  </main>
+  <script src="../assets/js/app.js"></script>
+  <script>loadTeacherPage();</script>
+</body>
+</html>
